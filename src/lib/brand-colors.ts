@@ -1,10 +1,9 @@
 import type { CSSProperties } from "react";
 
 /**
- * Rotating brand palette taken from the ARTEC portfolio (blue, indigo,
- * orange, red, green). Used to color-code repeating items — solutions,
- * capability groups, pillars, ecosystem nodes — the way the brochure
- * assigns a distinct color per concept.
+ * Rotating brand palette: shades of one blue family (blue, indigo, teal, slate, sky)
+ * so the site reads as a single palette with depth. Used to tell apart repeating items —
+ * solutions, capability groups, pillars, ecosystem nodes — without many hues.
  */
 export const BRAND_COLORS = [
   "var(--brand-blue)",

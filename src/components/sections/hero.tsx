@@ -55,7 +55,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden pt-32 pb-0 md:pt-40"
+      className="relative overflow-hidden pt-24 pb-0 md:pt-28"
     >
       {/* Mobile only: a light veil so text stays readable on small screens;
           on desktop the video is left fully visible. */}
@@ -65,87 +65,74 @@ export function Hero() {
         style={{ background: "color-mix(in srgb, var(--background) 46%, transparent)" }}
       />
 
-      <div className="container-artec flex min-h-[78vh] flex-col justify-between gap-16 pb-10 md:pb-14">
-        <div className="max-w-xl">
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex w-fit items-center gap-2.5 rounded-full bg-[color-mix(in_srgb,var(--solid-tint)_62%,transparent)] px-3.5 py-1.5"
-          >
-            <span className="relative flex h-1.5 w-1.5 shrink-0">
-              <span className="signal-dot h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
-            </span>
-            <ScrambleText
-              text="ARTEC S.A.S. — SOLUCIONES INTEGRADAS"
-              charDuration={5}
-              className="font-mono text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent)]"
-            />
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="mt-6 text-balance font-display text-[2.6rem] font-medium leading-[1.05] tracking-tight text-[var(--text-primary)] sm:text-6xl lg:text-[3.4rem] lg:max-w-xl"
-            style={{ textShadow: "0 0 26px var(--background), 0 0 8px color-mix(in srgb, var(--background) 70%, transparent)" }}
-          >
-            Conectamos marcas, tecnología y territorios a gran escala.
-          </motion.h1>
-
-          <p
-            className="relative mt-5 max-w-md text-base font-medium leading-relaxed text-[var(--text-primary)] md:text-lg"
-            style={{ textShadow: HALO }}
-          >
-            {INTRO.map((seg, si) => {
-              const words = seg.text.split(/(\s+)/);
-              const nodes = words.map((w, wi) =>
-                /^\s+$/.test(w) || w === "" ? (
-                  w
-                ) : (
-                  <motion.span
-                    key={wi}
-                    className="inline-block"
-                    initial={prefersReducedMotion ? false : { opacity: 0, y: 10, filter: "blur(8px)" }}
-                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                    transition={{ duration: 0.55, delay: 0.35 + (seg.offset + wi) * 0.035 }}
-                  >
-                    {w}
-                  </motion.span>
-                ),
-              );
-              return (
-                <span key={si} className={seg.hl ? "font-semibold" : undefined}>
-                  {nodes}
-                </span>
-              );
-            })}
-          </p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-7 flex flex-wrap items-center gap-4"
-          >
-            <MagneticCTA href="#contact" variant="primary">
-              Hablemos de tu proyecto
-            </MagneticCTA>
-            <MagneticCTA href="#solutions" variant="secondary" className="!bg-[color-mix(in_srgb,var(--solid-tint)_66%,transparent)]">
-              Explora nuestras soluciones
-            </MagneticCTA>
-          </motion.div>
-        </div>
-
+      <div className="container-artec flex min-h-[92vh] flex-col justify-end pb-8 md:pb-12">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.25 }}
-          className="relative w-full"
-          style={{ textShadow: HALO }}
-          aria-label="Flujo del ecosistema ARTEC"
+          transition={{ duration: 0.7 }}
+          className="rounded-[2rem] bg-[color-mix(in_srgb,var(--solid-tint)_74%,transparent)] p-6 shadow-[0_20px_60px_-30px_rgba(18,94,136,0.35)] backdrop-blur-md md:p-8"
         >
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-3 rounded-full bg-[color-mix(in_srgb,var(--solid-tint)_62%,transparent)] px-6 py-3 backdrop-blur-sm lg:w-fit">
+          <div className="grid items-end gap-6 lg:grid-cols-[1.25fr_1fr] lg:gap-12">
+            <div>
+              <div className="flex w-fit items-center gap-2.5 rounded-full bg-[color-mix(in_srgb,var(--solid-tint)_80%,transparent)] px-3.5 py-1.5">
+                <span className="relative flex h-1.5 w-1.5 shrink-0">
+                  <span className="signal-dot h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
+                </span>
+                <ScrambleText
+                  text="ARTEC S.A.S. — SOLUCIONES INTEGRADAS"
+                  charDuration={5}
+                  className="font-mono text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent)]"
+                />
+              </div>
+              <h1 className="mt-4 text-balance font-display text-3xl font-medium leading-[1.08] tracking-tight text-[var(--text-primary)] sm:text-4xl lg:text-[2.7rem]">
+                Conectamos marcas, tecnología y territorios a gran escala.
+              </h1>
+            </div>
+
+            <div className="flex flex-col gap-5">
+              <p
+              className="relative max-w-md text-base font-medium leading-relaxed text-[var(--text-primary)] md:text-lg"
+              style={{ textShadow: HALO }}
+            >
+              {INTRO.map((seg, si) => {
+                const words = seg.text.split(/(\s+)/);
+                const nodes = words.map((w, wi) =>
+                  /^\s+$/.test(w) || w === "" ? (
+                    w
+                  ) : (
+                    <motion.span
+                      key={wi}
+                      className="inline-block"
+                      initial={prefersReducedMotion ? false : { opacity: 0, y: 10, filter: "blur(8px)" }}
+                      animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                      transition={{ duration: 0.55, delay: 0.35 + (seg.offset + wi) * 0.035 }}
+                    >
+                      {w}
+                    </motion.span>
+                  ),
+                );
+                return (
+                  <span key={si} className={seg.hl ? "font-semibold" : undefined}>
+                    {nodes}
+                  </span>
+                );
+              })}
+            </p>
+              <div className="flex flex-wrap items-center gap-3">
+                <MagneticCTA href="#contact" variant="primary">
+                  Hablemos de tu proyecto
+                </MagneticCTA>
+                <MagneticCTA href="#solutions" variant="secondary">
+                  Explora nuestras soluciones
+                </MagneticCTA>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-[var(--border)] pt-5"
+            aria-label="Flujo del ecosistema ARTEC"
+          >
             <p className="font-mono text-xs font-bold uppercase tracking-[0.16em] text-[var(--text-primary)]">
               El ecosistema
             </p>

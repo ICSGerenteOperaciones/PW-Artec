@@ -276,11 +276,9 @@
     overflow: hidden;
   }
 
-  .video-backdrop {
-    background: var(--background);
-  }
-
-  /* Whole frame visible (no cropping), edges feathered into the page color. */
+  /* Always fills the viewport (no empty bands); anchored near the top so the
+     dashboards and the icon network stay visible and only the empty terrain
+     at the bottom is cropped on very wide screens. */
   .video-backdrop video,
   .video-backdrop .video-poster {
     position: absolute;
@@ -288,10 +286,8 @@
     top: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    object-position: center top;
-    -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
-    mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+    object-fit: cover;
+    object-position: center 18%;
   }
 
   .video-backdrop .video-scrim {

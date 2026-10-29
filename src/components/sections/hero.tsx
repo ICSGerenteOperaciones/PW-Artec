@@ -26,15 +26,12 @@ const MARQUEE_ITEMS = [
 ];
 
 const INTRO_PARTS: { text: string; hl?: boolean }[] = [
-  { text: "Integramos " },
-  { text: "estrategia digital", hl: true },
-  { text: ", tecnología, operación de " },
+  { text: "Estrategia digital", hl: true },
+  { text: ", tecnología, " },
   { text: "contact center", hl: true },
   { text: " y " },
-  { text: "ejecución territorial", hl: true },
-  { text: " para transformar oportunidades en " },
-  { text: "resultados medibles", hl: true },
-  { text: "." },
+  { text: "territorio", hl: true },
+  { text: " en un solo ecosistema." },
 ];
 
 // Running word offset per segment so the reveal cascades across the sentence.
@@ -68,8 +65,8 @@ export function Hero() {
         style={{ background: "color-mix(in srgb, var(--background) 46%, transparent)" }}
       />
 
-      <div className="container-artec grid items-center gap-16 pb-20 lg:grid-cols-[1.15fr_0.85fr] lg:gap-8 md:pb-28">
-        <div>
+      <div className="container-artec flex min-h-[78vh] flex-col justify-between gap-16 pb-10 md:pb-14">
+        <div className="max-w-xl">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -90,14 +87,14 @@ export function Hero() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="mt-6 text-balance font-display text-[2.6rem] font-medium leading-[1.05] tracking-tight text-[var(--text-primary)] sm:text-6xl lg:text-[4.2rem]"
+            className="mt-6 text-balance font-display text-[2.6rem] font-medium leading-[1.05] tracking-tight text-[var(--text-primary)] sm:text-6xl lg:text-[3.4rem] lg:max-w-xl"
             style={{ textShadow: "0 0 26px var(--background), 0 0 8px color-mix(in srgb, var(--background) 70%, transparent)" }}
           >
             Conectamos marcas, tecnología y territorios a gran escala.
           </motion.h1>
 
           <p
-            className="relative mt-7 max-w-xl text-base font-medium leading-relaxed text-[var(--text-primary)] md:text-lg"
+            className="relative mt-5 max-w-md text-base font-medium leading-relaxed text-[var(--text-primary)] md:text-lg"
             style={{ textShadow: HALO }}
           >
             {INTRO.map((seg, si) => {
@@ -129,7 +126,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-10 flex flex-wrap items-center gap-4"
+            className="mt-7 flex flex-wrap items-center gap-4"
           >
             <MagneticCTA href="#contact" variant="primary">
               Hablemos de tu proyecto
@@ -144,40 +141,26 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.25 }}
-          className="relative mx-auto w-full max-w-sm p-8"
+          className="relative w-full"
           style={{ textShadow: HALO }}
           aria-label="Flujo del ecosistema ARTEC"
         >
-          <p
-            className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-[var(--text-primary)]"
-            style={{
-              textShadow:
-                "0 0 1px var(--background), 0 0 2px var(--background), 0 0 4px var(--background), 0 0 7px var(--background), 0 0 12px var(--background), 0 0 12px var(--background)",
-            }}
-          >
-            El ecosistema
-          </p>
-          <div className="relative mt-6 pl-7">
-            <div
-              aria-hidden="true"
-              className="absolute left-[5px] top-1 bottom-1 w-[2px] rounded-full opacity-70"
-              style={{
-                background:
-                  "linear-gradient(to bottom, var(--brand-blue), var(--brand-indigo), var(--brand-orange), var(--brand-red), var(--brand-green))",
-              }}
-            />
-            <ul className="space-y-5">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-3 rounded-full bg-[color-mix(in_srgb,var(--solid-tint)_62%,transparent)] px-6 py-3 backdrop-blur-sm lg:w-fit">
+            <p className="font-mono text-xs font-bold uppercase tracking-[0.16em] text-[var(--text-primary)]">
+              El ecosistema
+            </p>
+            <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
               {FLOW_STEPS.map((step, i) => (
                 <motion.li
                   key={step}
-                  initial={{ opacity: 0, x: -8 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.5 + i * 0.08 }}
-                  className="relative flex items-center gap-3"
+                  className="flex items-center gap-2"
                 >
                   <span
                     aria-hidden="true"
-                    className="flow-dot absolute -left-7 h-3 w-3 -translate-x-1/2 rounded-full border-2 border-[var(--background)]"
+                    className="flow-dot h-2.5 w-2.5 rounded-full"
                     style={{
                       background: brandColor(i),
                       ["--dot" as string]: brandColor(i),
@@ -185,7 +168,7 @@ export function Hero() {
                     }}
                   />
                   <span
-                    className="flow-text text-base font-semibold text-[var(--text-primary)]"
+                    className="flow-text text-sm font-semibold text-[var(--text-primary)]"
                     style={{ animationDelay: `${i}s` }}
                   >
                     {step}

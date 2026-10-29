@@ -19,8 +19,8 @@
   --success: #2f9e58;
   --warning: #b8791c;
   --shadow-color: 140 10% 10%;
-  --scrim-top: rgba(14, 22, 15, 0.26);
-  --scrim-bottom: rgba(14, 22, 15, 0.4);
+  --scrim-top: rgba(250, 249, 246, 0);
+  --scrim-bottom: rgba(250, 249, 246, 0.18);
 }
 
 :root[data-theme="dark"] {

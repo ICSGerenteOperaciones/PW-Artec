@@ -59,7 +59,7 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   aria-current={isActive ? "true" : undefined}
-                  className="relative py-1 text-sm font-medium text-[var(--text-secondary)] transition-colors duration-200 hover:text-[var(--text-primary)]"
+                  className="text-halo relative py-1 text-sm font-semibold text-[var(--text-primary)] transition-colors duration-200 hover:text-[var(--accent)]"
                 >
                   {link.label}
                   <span

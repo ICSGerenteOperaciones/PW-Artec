@@ -49,7 +49,7 @@ export function Navbar() {
 
           <nav
             aria-label="Principal"
-            className="hidden items-center gap-8 lg:flex"
+            className="hidden items-center gap-9 lg:flex"
           >
             {NAV_LINKS.map((link) => {
               const id = link.href.replace("#", "");
@@ -59,7 +59,7 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   aria-current={isActive ? "true" : undefined}
-                  className="text-halo relative py-1 text-sm font-semibold text-[var(--text-primary)] transition-colors duration-200 hover:text-[var(--accent)]"
+                  className="text-halo relative py-1 text-base font-semibold text-[var(--text-primary)] transition-colors duration-200 hover:text-[var(--accent)]"
                 >
                   {link.label}
                   <span

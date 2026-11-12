@@ -1,7 +1,7 @@
 export const SITE = {
-  name: "ARTEC S.A.S.",
+  name: "ARTEC",
   url: "https://artecsas.co",
-  legalName: "ARTEC S.A.S.",
+  legalName: "ARTEC",
   positioning:
     "Conectamos marcas y territorios con estrategias digitales, tecnología y conversión a gran escala.",
   differentiator: "Ecosistema 360° sin intermediarios.",

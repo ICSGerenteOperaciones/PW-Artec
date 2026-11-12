@@ -55,7 +55,7 @@ export const SOLUTIONS: Solution[] = [
     id: "territorial-strategies",
     index: "02",
     category: "Estrategias Territoriales",
-    title: "Estrategias territoriales y apropiación TIC",
+    title: "Estrategias territoriales y apropiación digital",
     positioning: "Transformamos las iniciativas digitales en impacto territorial real.",
     subservices: [
       {
@@ -71,7 +71,7 @@ export const SOLUTIONS: Solution[] = [
       {
         title: "Cierre de brecha digital",
         description:
-          "Campañas orientadas a la apropiación de las TIC, la adopción digital y la vinculación directa con el usuario final.",
+          "Campañas orientadas a la apropiación digital, la adopción de tecnología y la vinculación directa con el usuario final.",
       },
     ],
   },
@@ -126,14 +126,24 @@ export const SOLUTIONS: Solution[] = [
   {
     id: "btl-events",
     index: "05",
-    category: "BTL y Eventos",
-    title: "Adecuación BTL y producción de eventos corporativos",
-    positioning: "Convertimos espacios físicos en experiencias que generan impacto.",
+    category: "ATL, BTL y Eventos",
+    title: "Publicidad ATL y BTL, y producción de eventos",
+    positioning: "Llevamos tu marca a los medios, a la calle y a las experiencias que generan impacto.",
     subservices: [
       {
-        title: "Adecuación de espacios para montajes y eventos",
+        title: "Publicidad ATL",
         description:
-          "Creamos y acondicionamos escenarios de alto impacto para tus eventos corporativos. Soluciones a la medida, sin sobrecostos y con calidad garantizada de principio a fin.",
+          "Campañas en medios masivos: televisión, radio, prensa, vallas y publicidad exterior para ganar reconocimiento de marca a gran escala.",
+      },
+      {
+        title: "Activaciones BTL y marketing experiencial",
+        description:
+          "Activaciones de marca, impulso en punto de venta, brigadas y experiencias que conectan directamente con tu público objetivo.",
+      },
+      {
+        title: "Producción de eventos y adecuación de espacios",
+        description:
+          "Lanzamientos, ferias y eventos corporativos con montaje, logística y escenarios a la medida, sin sobrecostos y con calidad garantizada.",
       },
     ],
   },
@@ -276,7 +286,7 @@ export const CAPABILITIES: CapabilityGroup[] = [
   },
   {
     category: "Eventos",
-    items: ["BTL", "Adecuación de espacios", "Eventos corporativos", "Producción"],
+    items: ["ATL", "BTL", "Producción de eventos", "Adecuación de espacios"],
   },
 ];
 
@@ -319,7 +329,7 @@ export const SERVICE_OPTIONS = [
   "Estrategias Territoriales",
   "Contact Center / BPO",
   "Web y Tecnología",
-  "BTL y Eventos",
+  "ATL, BTL y Eventos",
   "Solución Integral",
   "Otro",
 ] as const;

@@ -63,7 +63,7 @@ export function Footer() {
 
       <div className="relative border-t border-[var(--border)]">
         <div className="container-artec flex flex-col items-center justify-between gap-3 py-6 text-xs text-[var(--text-muted)] sm:flex-row">
-          <p>© {new Date().getFullYear()} ARTEC S.A.S. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} ARTEC. Todos los derechos reservados.</p>
           <p>Bogotá D.C., Colombia</p>
         </div>
       </div>

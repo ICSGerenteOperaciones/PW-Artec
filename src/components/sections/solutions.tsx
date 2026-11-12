@@ -27,7 +27,7 @@ export function Solutions() {
         {/* Desktop: expanding panels */}
         <div
           className="mt-16 hidden gap-2 lg:flex"
-          style={{ height: "580px" }}
+          style={{ minHeight: "580px" }}
         >
           {SOLUTIONS.map((solution, i) => {
             const isActive = i === activeIndex;

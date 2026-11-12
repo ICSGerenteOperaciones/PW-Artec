@@ -9,15 +9,10 @@ export function Logo({ className = "" }: { className?: string }) {
         width={433}
         height={410}
         priority
-        className="h-11 w-auto shrink-0 drop-shadow-[0_0_3px_var(--background)]"
+        className="h-12 w-auto shrink-0 drop-shadow-[0_0_3px_var(--background)]"
       />
-      <span className="flex flex-col leading-none">
-        <span className="font-display text-2xl font-extrabold tracking-tight text-[var(--text-primary)]">
-          ARTEC
-        </span>
-        <span className="mt-1 font-display text-[0.8rem] font-bold tracking-[0.32em] text-[var(--accent)]">
-          S.A.S.
-        </span>
+      <span className="font-display text-3xl font-extrabold leading-none tracking-tight text-[var(--text-primary)]">
+        ARTEC
       </span>
     </span>
   );

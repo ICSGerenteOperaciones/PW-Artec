@@ -16,7 +16,7 @@ export function About() {
           <SectionHeading
             eyebrow="Sobre ARTEC"
             title="Impulsamos el alcance y los resultados de su organización con un aliado integral."
-            description="ARTEC S.A.S. opera como un aliado integral que combina planeación estratégica, ejecución digital, infraestructura tecnológica, operación humana e implementación territorial en un ecosistema único y coordinado, construido para escalar."
+            description="ARTEC opera como un aliado integral que combina planeación estratégica, ejecución digital, infraestructura tecnológica, operación humana e implementación territorial en un ecosistema único y coordinado, construido para escalar."
           />
         </div>
 

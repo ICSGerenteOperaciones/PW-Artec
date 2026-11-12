@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
+import Image from "next/image";
 import { MagneticCTA } from "@/components/ui/magnetic-cta";
 import { brandColor } from "@/lib/brand-colors";
 import { ScrambleText } from "@/components/ui/scramble-text";
@@ -67,10 +68,31 @@ export function Hero() {
 
       <div className="container-artec flex min-h-[92vh] flex-col justify-end pb-8 md:pb-12">
         <motion.div
+          initial={{ opacity: 0, scale: 0.92 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.9, delay: 0.2 }}
+          className="flex flex-1 items-center justify-center py-10"
+        >
+          <div className="flex items-center gap-4 sm:gap-6">
+            <Image
+              src="/artec-mark.png"
+              alt=""
+              width={433}
+              height={410}
+              priority
+              className="h-20 w-auto drop-shadow-[0_6px_24px_rgba(255,255,255,0.55)] sm:h-28 lg:h-36"
+            />
+            <span className="font-display text-5xl font-extrabold leading-none tracking-tight text-white drop-shadow-[0_4px_20px_rgba(21,15,51,0.45)] sm:text-7xl lg:text-8xl">
+              ARTEC
+            </span>
+          </div>
+        </motion.div>
+
+        <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="rounded-[2rem] bg-[color-mix(in_srgb,var(--solid-tint)_74%,transparent)] p-6 shadow-[0_20px_60px_-30px_rgba(212,20,106,0.35)] backdrop-blur-md md:p-8"
+          className="rounded-[2rem] bg-[color-mix(in_srgb,var(--solid-tint)_74%,transparent)] p-6 shadow-[0_20px_60px_-30px_rgba(91,43,217,0.35)] backdrop-blur-md md:p-8"
         >
           <div className="grid items-end gap-6 lg:grid-cols-[1.25fr_1fr] lg:gap-12">
             <div>
@@ -79,7 +101,7 @@ export function Hero() {
                   <span className="signal-dot h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
                 </span>
                 <ScrambleText
-                  text="ARTEC S.A.S. — SOLUCIONES INTEGRADAS"
+                  text="ARTEC — SOLUCIONES INTEGRADAS"
                   charDuration={5}
                   className="font-mono text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent)]"
                 />

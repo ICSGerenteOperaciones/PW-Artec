@@ -20,11 +20,11 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "ARTEC S.A.S. | Estrategia Digital, Tecnología y Soluciones Integradas",
-    template: "%s | ARTEC S.A.S.",
+    default: "ARTEC | Estrategia Digital, Tecnología y Soluciones Integradas",
+    template: "%s | ARTEC",
   },
   description:
-    "ARTEC S.A.S. integra marketing digital, tecnología, contact center, estrategias territoriales y soluciones BTL para conectar marcas y territorios a gran escala.",
+    "ARTEC integra marketing digital, tecnología, contact center, estrategias territoriales y soluciones BTL para conectar marcas y territorios a gran escala.",
   keywords: [
     "ARTEC",
     "marketing digital Colombia",
@@ -32,23 +32,24 @@ export const metadata: Metadata = {
     "estrategias territoriales",
     "tecnología web Colombia",
     "BTL eventos corporativos",
+    "publicidad ATL",
   ],
-  authors: [{ name: "ARTEC S.A.S." }],
+  authors: [{ name: "ARTEC" }],
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "es_CO",
     url: SITE.url,
-    siteName: "ARTEC S.A.S.",
-    title: "ARTEC S.A.S. | Estrategia Digital, Tecnología y Soluciones Integradas",
+    siteName: "ARTEC",
+    title: "ARTEC | Estrategia Digital, Tecnología y Soluciones Integradas",
     description:
-      "ARTEC S.A.S. integra marketing digital, tecnología, contact center, estrategias territoriales y soluciones BTL para conectar marcas y territorios a gran escala.",
+      "ARTEC integra marketing digital, tecnología, contact center, estrategias territoriales y soluciones BTL para conectar marcas y territorios a gran escala.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ARTEC S.A.S. | Estrategia Digital, Tecnología y Soluciones Integradas",
+    title: "ARTEC | Estrategia Digital, Tecnología y Soluciones Integradas",
     description:
-      "ARTEC S.A.S. integra marketing digital, tecnología, contact center, estrategias territoriales y soluciones BTL para conectar marcas y territorios a gran escala.",
+      "ARTEC integra marketing digital, tecnología, contact center, estrategias territoriales y soluciones BTL para conectar marcas y territorios a gran escala.",
   },
   robots: { index: true, follow: true },
 };

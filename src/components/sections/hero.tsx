@@ -70,7 +70,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="rounded-[2rem] bg-[color-mix(in_srgb,var(--solid-tint)_74%,transparent)] p-6 shadow-[0_20px_60px_-30px_rgba(18,94,136,0.35)] backdrop-blur-md md:p-8"
+          className="rounded-[2rem] bg-[color-mix(in_srgb,var(--solid-tint)_74%,transparent)] p-6 shadow-[0_20px_60px_-30px_rgba(212,20,106,0.35)] backdrop-blur-md md:p-8"
         >
           <div className="grid items-end gap-6 lg:grid-cols-[1.25fr_1fr] lg:gap-12">
             <div>
@@ -85,7 +85,7 @@ export function Hero() {
                 />
               </div>
               <h1 className="mt-4 text-balance font-display text-3xl font-medium leading-[1.08] tracking-tight text-[var(--text-primary)] sm:text-4xl lg:text-[2.7rem]">
-                Conectamos marcas, tecnología y territorios a gran escala.
+                Conectamos <span className="text-gradient font-bold">marcas</span>, tecnología y territorios a gran escala.
               </h1>
             </div>
 
@@ -112,7 +112,7 @@ export function Hero() {
                   ),
                 );
                 return (
-                  <span key={si} className={seg.hl ? "font-semibold" : undefined}>
+                  <span key={si} className={seg.hl ? "font-bold text-[var(--accent)]" : undefined}>
                     {nodes}
                   </span>
                 );
@@ -181,7 +181,7 @@ export function Hero() {
 
       <div
         aria-hidden="true"
-        className="relative overflow-hidden border-t border-[var(--border)] bg-[color-mix(in_srgb,var(--solid-tint)_64%,transparent)] py-4 backdrop-blur-sm"
+        className="relative overflow-hidden marquee-band py-4"
       >
         <div className={`flex w-max ${prefersReducedMotion ? "" : "animate-marquee"}`}>
           {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((item, i) => (
@@ -190,7 +190,7 @@ export function Hero() {
               className="flex items-center gap-3 pr-10 font-mono text-xs font-medium tracking-[0.2em] text-[var(--text-primary)]"
             >
               {item}
-              <span className="text-[var(--accent)]">•</span>
+              <span className="text-[#ffd23f]">★</span>
             </span>
           ))}
         </div>

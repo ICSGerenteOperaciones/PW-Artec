@@ -36,8 +36,8 @@ export function MagneticCTA({
     "inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold tracking-tight transition-colors duration-300 whitespace-nowrap";
   const styles =
     variant === "primary"
-      ? "bg-[var(--accent)] text-[var(--accent-foreground)] hover:bg-[var(--accent-hover)]"
-      : "border border-[var(--text-muted)] bg-[var(--surface-glass-strong)] text-[var(--text-primary)] hover:border-[var(--accent)] hover:text-[var(--accent)]";
+      ? "bg-grad-brand text-white shadow-lg shadow-[color-mix(in_srgb,var(--accent)_35%,transparent)]"
+      : "border-2 border-[var(--accent)] bg-[var(--surface-glass-strong)] text-[var(--text-primary)] hover:border-[var(--accent)] hover:text-[var(--accent)]";
 
   return (
     <motion.div

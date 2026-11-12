@@ -1,71 +1,75 @@
 @import "tailwindcss";
 
 :root {
-  --background: #faf9f6;
+  --background: #fff9f3;
   --surface: #ffffff;
-  --surface-elevated: #f2f0ea;
-  --text-primary: #10130f;
-  --text-secondary: #3b433f;
-  --text-muted: #4a544e;
-  --border: #e2e0d7;
-  --accent: #0a5a80;
-  --accent-hover: #084868;
-  --accent-foreground: #f5faff;
-  --brand-blue: #125e88;
-  --brand-indigo: #2b4a8f;
-  --brand-orange: #1d7a8a;
-  --brand-red: #3f5f84;
-  --brand-green: #22729f;
+  --surface-elevated: #ffeede;
+  --text-primary: #1a1030;
+  --text-secondary: #3f3556;
+  --text-muted: #51476a;
+  --border: #f0d9e4;
+  --accent: #d4146a;
+  --accent-hover: #ae0f56;
+  --accent-foreground: #ffffff;
+  --brand-blue: #1f7fd6;
+  --brand-indigo: #7a3df0;
+  --brand-orange: #f26a0f;
+  --brand-red: #d4146a;
+  --brand-green: #12a36b;
   --success: #2f9e58;
   --warning: #b8791c;
-  --shadow-color: 140 10% 10%;
-  --scrim-top: rgba(250, 249, 246, 0);
-  --scrim-bottom: rgba(250, 249, 246, 0.18);
+  --shadow-color: 330 40% 15%;
+  --brand-yellow: #f5b800;
+  --grad-brand: linear-gradient(110deg, #d4146a 0%, #f26a0f 55%, #f5b800 100%);
+  --grad-cool: linear-gradient(110deg, #7a3df0 0%, #d4146a 100%);
+  --scrim-top: rgba(255, 249, 243, 0);
+  --scrim-bottom: rgba(255, 249, 243, 0.18);
 }
 
 :root[data-theme="dark"] {
-  --background: #161b14;
-  --surface: #1e241b;
-  --surface-elevated: #272e22;
-  --text-primary: #f2f4ee;
-  --text-secondary: #d3d8ca;
-  --text-muted: #c2c8b8;
-  --border: #363f2e;
-  --accent: #86c8e6;
-  --accent-hover: #a9d9ee;
-  --accent-foreground: #0c2431;
-  --brand-blue: #86c8e6;
-  --brand-indigo: #a3b4ea;
-  --brand-orange: #7fd0d8;
-  --brand-red: #a9bdd6;
-  --brand-green: #9fd0f0;
+  --background: #140d24;
+  --surface: #1f1537;
+  --surface-elevated: #2b1d4a;
+  --text-primary: #fbf6ff;
+  --text-secondary: #ddd2f0;
+  --text-muted: #cbbde6;
+  --border: #46306e;
+  --accent: #ff5fa2;
+  --accent-hover: #ff8abb;
+  --accent-foreground: #2a0618;
+  --brand-blue: #5cb4ff;
+  --brand-indigo: #b794ff;
+  --brand-orange: #ff9a4d;
+  --brand-red: #ff5fa2;
+  --brand-green: #4fe0a4;
   --success: #55c37f;
   --warning: #e0a94a;
-  --scrim-top: rgba(10, 16, 10, 0.35);
-  --scrim-bottom: rgba(10, 16, 10, 0.52);
+  --scrim-top: rgba(20, 8, 40, 0.35);
+  --scrim-bottom: rgba(20, 8, 40, 0.52);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --background: #161b14;
-    --surface: #1e241b;
-    --surface-elevated: #272e22;
-    --text-primary: #f2f4ee;
-    --text-secondary: #d3d8ca;
-    --text-muted: #c2c8b8;
-    --border: #363f2e;
-    --accent: #86c8e6;
-    --accent-hover: #a9d9ee;
-    --accent-foreground: #0c2431;
-    --brand-blue: #86c8e6;
-    --brand-indigo: #a3b4ea;
-    --brand-orange: #7fd0d8;
-    --brand-red: #a9bdd6;
-    --brand-green: #9fd0f0;
+    --grad-brand: linear-gradient(110deg, #ff5fa2 0%, #ff9a4d 55%, #ffd23f 100%);
+    --background: #140d24;
+    --surface: #1f1537;
+    --surface-elevated: #2b1d4a;
+    --text-primary: #fbf6ff;
+    --text-secondary: #ddd2f0;
+    --text-muted: #cbbde6;
+    --border: #46306e;
+    --accent: #ff5fa2;
+    --accent-hover: #ff8abb;
+    --accent-foreground: #2a0618;
+    --brand-blue: #5cb4ff;
+    --brand-indigo: #b794ff;
+    --brand-orange: #ff9a4d;
+    --brand-red: #ff5fa2;
+    --brand-green: #4fe0a4;
     --success: #55c37f;
     --warning: #e0a94a;
-    --scrim-top: rgba(10, 16, 10, 0.35);
-    --scrim-bottom: rgba(10, 16, 10, 0.52);
+    --scrim-top: rgba(20, 8, 40, 0.35);
+    --scrim-bottom: rgba(20, 8, 40, 0.52);
   }
 }
 
@@ -98,27 +102,27 @@
    (--section-tint, set per section; defaults to the accent). Redeclared on
    .section-tinted so var() resolves against that section's own tint. */
 :root {
-  --tint-pct: 13%;
+  --tint-pct: 20%;
   --photo-brightness: 1;
   --video-veil-pct: 56%;
   --video-brightness: 1;
   --tint-solutions: var(--brand-orange);
-  --tint-intro: #5f7fb8;
-  --motion-veil-pct: 50%;
-  --motion-orb-opacity: 0.8;
+  --tint-intro: #c04fd0;
+  --motion-veil-pct: 38%;
+  --motion-orb-opacity: 0.95;
   --nav-top-pct: 38%;
   --veil-pct: 92%;
   --wash-pct: 15%;
 }
 
 :root[data-theme="dark"] {
-  --tint-pct: 24%;
+  --tint-pct: 30%;
   --veil-pct: 96%;
   --wash-pct: 8%;
   --photo-brightness: 0.5;
   --video-veil-pct: 78%;
   --video-brightness: 0.75;
-  --tint-solutions: #7d88c4;
+  --tint-solutions: #b57cf0;
   --tint-intro: #7d88c4;
   --motion-veil-pct: 54%;
   --motion-orb-opacity: 0.55;
@@ -127,13 +131,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --tint-pct: 24%;
+    --tint-pct: 30%;
   --veil-pct: 96%;
   --wash-pct: 8%;
   --photo-brightness: 0.5;
   --video-veil-pct: 78%;
   --video-brightness: 0.75;
-  --tint-solutions: #7d88c4;
+  --tint-solutions: #b57cf0;
   --tint-intro: #7d88c4;
   --motion-veil-pct: 54%;
   --motion-orb-opacity: 0.55;
@@ -458,4 +462,33 @@
     0 0 10px var(--background),
     0 0 16px var(--background),
     0 0 28px color-mix(in srgb, var(--background) 85%, transparent);
+}
+
+/* Marketing accents: gradient text and gradient surfaces. */
+.text-gradient {
+  background: var(--grad-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-grad-brand {
+  background: var(--grad-brand);
+  background-size: 160% 100%;
+  transition: background-position 0.5s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.bg-grad-brand:hover {
+  background-position: 100% 0;
+  box-shadow: 0 10px 30px -8px color-mix(in srgb, var(--accent) 60%, transparent);
+}
+
+:root[data-theme="dark"] .text-gradient,
+:root[data-theme="dark"] .bg-grad-brand {
+  --grad-brand: linear-gradient(110deg, #ff5fa2 0%, #ff9a4d 55%, #ffd23f 100%);
+}
+
+.marquee-band {
+  background: var(--grad-cool);
 }

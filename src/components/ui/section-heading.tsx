@@ -18,7 +18,7 @@ export function SectionHeading({
     <div className={align === "center" ? "text-center mx-auto max-w-2xl" : ""}>
       <Reveal>
         <p
-          className={`flex w-fit items-center gap-2.5 rounded-full bg-[var(--surface-glass-strong)] px-3 py-1 font-mono text-xs font-medium uppercase tracking-[0.2em] text-[var(--accent)] ${
+          className={`flex w-fit items-center gap-2.5 rounded-full bg-[var(--surface-glass-strong)] px-3 py-1 font-mono text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)] ring-1 ring-[var(--accent)]/30 ${
             align === "center" ? "mx-auto justify-center" : ""
           }`}
         >
@@ -29,7 +29,7 @@ export function SectionHeading({
         </p>
       </Reveal>
       <Reveal delay={0.08}>
-        <h2 className="mt-4 text-balance font-display text-3xl font-medium leading-[1.1] tracking-tight text-[var(--text-primary)] sm:text-4xl md:text-5xl">
+        <h2 className="mt-4 text-balance font-display text-3xl font-bold leading-[1.1] tracking-tight text-[var(--text-primary)] sm:text-4xl md:text-5xl">
           {title}
         </h2>
       </Reveal>

@@ -20,9 +20,7 @@ export function VideoBackground() {
           loop
           playsInline
           preload="auto"
-          poster="/video/artec-bg-poster.jpg"
         >
-          <source src="/video/artec-bg.webm" type="video/webm" />
           <source src="/video/artec-bg.mp4" type="video/mp4" />
         </video>
       ) : (

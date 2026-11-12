@@ -11,17 +11,17 @@
   --accent: #5b2bd9;
   --accent-hover: #4620b0;
   --accent-foreground: #ffffff;
-  --brand-blue: #1f7fd6;
-  --brand-indigo: #6d3df0;
+  --brand-blue: #5b2bd9;
+  --brand-indigo: #7a46f0;
   --brand-orange: #f26a0f;
-  --brand-red: #0e9fb0;
-  --brand-green: #12a36b;
+  --brand-red: #3b2bb8;
+  --brand-green: #9a5cf5;
   --success: #2f9e58;
   --warning: #b8791c;
   --shadow-color: 255 40% 15%;
   --brand-yellow: #f5b800;
-  --grad-brand: linear-gradient(110deg, #5b2bd9 0%, #2563eb 55%, #0e9fb0 100%);
-  --grad-cool: linear-gradient(110deg, #5b2bd9 0%, #2563eb 60%, #f26a0f 140%);
+  --grad-brand: linear-gradient(110deg, #5b2bd9 0%, #7c3aed 55%, #f26a0f 140%);
+  --grad-cool: linear-gradient(110deg, #5b2bd9 0%, #7c3aed 100%);
   --scrim-top: rgba(248, 246, 255, 0);
   --scrim-bottom: rgba(248, 246, 255, 0.18);
 }
@@ -37,11 +37,11 @@
   --accent: #a78bfa;
   --accent-hover: #c4b0ff;
   --accent-foreground: #12063a;
-  --brand-blue: #5cb4ff;
-  --brand-indigo: #b794ff;
+  --brand-blue: #a78bfa;
+  --brand-indigo: #c4b0ff;
   --brand-orange: #ff9a4d;
-  --brand-red: #5eead4;
-  --brand-green: #4fe0a4;
+  --brand-red: #8b7cf5;
+  --brand-green: #b794ff;
   --success: #55c37f;
   --warning: #e0a94a;
   --scrim-top: rgba(20, 8, 40, 0.35);
@@ -50,7 +50,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --grad-brand: linear-gradient(110deg, #a78bfa 0%, #5cb4ff 55%, #5eead4 100%);
+    --grad-brand: linear-gradient(110deg, #a78bfa 0%, #c084fc 55%, #ff9a4d 140%);
     --background: #140d24;
     --surface: #1f1537;
     --surface-elevated: #2b1d4a;
@@ -61,11 +61,11 @@
     --accent: #a78bfa;
     --accent-hover: #c4b0ff;
     --accent-foreground: #12063a;
-    --brand-blue: #5cb4ff;
-    --brand-indigo: #b794ff;
+    --brand-blue: #a78bfa;
+    --brand-indigo: #c4b0ff;
     --brand-orange: #ff9a4d;
-    --brand-red: #5eead4;
-    --brand-green: #4fe0a4;
+    --brand-red: #8b7cf5;
+    --brand-green: #b794ff;
     --success: #55c37f;
     --warning: #e0a94a;
     --scrim-top: rgba(20, 8, 40, 0.35);
@@ -107,7 +107,7 @@
   --video-veil-pct: 56%;
   --video-brightness: 1;
   --tint-solutions: var(--brand-indigo);
-  --tint-intro: #7aa2f0;
+  --tint-intro: #8a6ff0;
   --motion-veil-pct: 38%;
   --motion-orb-opacity: 0.95;
   --nav-top-pct: 38%;
@@ -123,7 +123,7 @@
   --video-veil-pct: 78%;
   --video-brightness: 0.75;
   --tint-solutions: #a78bfa;
-  --tint-intro: #7d88c4;
+  --tint-intro: #a78bfa;
   --motion-veil-pct: 54%;
   --motion-orb-opacity: 0.55;
   --nav-top-pct: 84%;
@@ -138,7 +138,7 @@
   --video-veil-pct: 78%;
   --video-brightness: 0.75;
   --tint-solutions: #a78bfa;
-  --tint-intro: #7d88c4;
+  --tint-intro: #a78bfa;
   --motion-veil-pct: 54%;
   --motion-orb-opacity: 0.55;
     --nav-top-pct: 84%;
@@ -492,7 +492,7 @@
 
 :root[data-theme="dark"] .text-gradient,
 :root[data-theme="dark"] .bg-grad-brand {
-  --grad-brand: linear-gradient(110deg, #a78bfa 0%, #5cb4ff 55%, #5eead4 100%);
+  --grad-brand: linear-gradient(110deg, #a78bfa 0%, #c084fc 55%, #ff9a4d 140%);
 }
 
 /* Soft band: video-clear at the top, fading into the next section's glass so
@@ -506,17 +506,17 @@
   backdrop-filter: blur(6px);
 }
 
-/* Scrolled navbar: branded violet→blue glass with light text instead of a white bar.
+/* Scrolled navbar: deep violet glass with light text instead of a white bar.
    Re-points the theme tokens inside the header so logo, links and button adapt. */
 .nav-solid {
   --text-primary: #ffffff;
   --text-secondary: #ffffff;
   --accent: #ffffff;
   --accent-hover: #ece6ff;
-  --accent-foreground: #3a1fa8;
-  --border: rgba(255, 255, 255, 0.32);
-  --background: #3a1fa8;
-  background: linear-gradient(100deg, rgba(88, 40, 214, 0.93), rgba(37, 99, 235, 0.93));
+  --accent-foreground: #1b0d4d;
+  --border: rgba(255, 255, 255, 0.28);
+  --background: #1b0d4d;
+  background: rgba(24, 12, 64, 0.88);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 10px 30px -14px rgba(21, 15, 51, 0.55);

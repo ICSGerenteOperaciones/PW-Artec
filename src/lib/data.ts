@@ -295,6 +295,22 @@ export const CASE_STUDY = {
   title: "Inclusión digital y comunicación de amplio alcance en Putumayo.",
   summary:
     'Conectividad y apropiación tecnológica para la inclusión digital en el departamento de Putumayo.',
+  highlights: [
+    {
+      title: "Divulgación y promoción",
+      text: "Campañas para que las comunidades conozcan y aprovechen el acceso a internet.",
+    },
+    {
+      title: "Encuestas y trabajo de campo",
+      text: "Levantamiento de datos en el territorio, articulando marketing, tecnología y equipos locales.",
+    },
+    {
+      title: "Vinculación comunitaria",
+      text: "Acompañamiento directo a las personas para una operación efectiva y cercana.",
+    },
+  ],
+  result:
+    "Contribuimos a masificar el acceso a internet y la apropiación tecnológica en el departamento.",
   timeline: [
     {
       label: "Reto",
@@ -323,6 +339,32 @@ export const CASE_STUDY = {
     },
   ],
 };
+
+export const TERRITORY_STORY = {
+  title: "De la estrategia digital al territorio real.",
+  description:
+    "Llevamos tu proyecto desde el escritorio hasta las comunidades, en cualquier municipio, departamento o región.",
+  chapters: [
+    {
+      title: "Escuchamos el territorio",
+      text: "Diagnóstico y levantamiento de campo para entender a cada comunidad antes de actuar.",
+    },
+    {
+      title: "Conectamos",
+      text: "Canales digitales y tecnología que llegan a las personas, incluso donde antes no llegaban.",
+    },
+    {
+      title: "Activamos en campo",
+      text: "Equipos territoriales, promoción y vinculación directa, cara a cara con la gente.",
+    },
+    {
+      title: "Medimos el impacto",
+      text: "Datos claros para demostrar resultados reales a tu organización y a tus aliados.",
+    },
+  ],
+  closing: "Cualquier territorio. Un mismo ecosistema.",
+  reach: ["Municipios", "Departamentos", "Regiones", "Alcance nacional"],
+} as const;
 
 export const SERVICE_OPTIONS = [
   "Marketing Digital",

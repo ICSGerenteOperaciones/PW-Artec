@@ -7,6 +7,7 @@ import { Solutions } from "@/components/sections/solutions";
 import { Ecosystem360 } from "@/components/sections/ecosystem-360";
 import { Gallery } from "@/components/sections/gallery";
 import { Capabilities } from "@/components/sections/capabilities";
+import { TerritorialImpact } from "@/components/sections/territorial-impact";
 import { CaseStudy } from "@/components/sections/case-study";
 import { WhyArtec } from "@/components/sections/why-artec";
 import { About } from "@/components/sections/about";
@@ -24,6 +25,7 @@ export default function Home() {
         <Ecosystem360 />
         <Gallery />
         <Capabilities />
+        <TerritorialImpact />
         <CaseStudy />
         <WhyArtec />
         <About />

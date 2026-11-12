@@ -513,11 +513,17 @@
   --text-secondary: #ffffff;
   --accent: #ffffff;
   --accent-hover: #ece6ff;
-  --accent-foreground: #1b0d4d;
-  --border: rgba(255, 255, 255, 0.28);
-  --background: #1b0d4d;
-  background: rgba(24, 12, 64, 0.88);
+  --accent-foreground: #3d1aa8;
+  --border: rgba(255, 255, 255, 0.3);
+  --background: #3d1aa8;
+  background: rgba(88, 42, 210, 0.94);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 10px 30px -14px rgba(21, 15, 51, 0.55);
+}
+
+:root[data-theme="dark"] .nav-solid {
+  --accent-foreground: #1b0d4d;
+  --background: #1b0d4d;
+  background: rgba(24, 12, 64, 0.88);
 }

@@ -203,16 +203,16 @@ export function Hero() {
 
       <div
         aria-hidden="true"
-        className="relative overflow-hidden marquee-band py-4"
+        className="relative overflow-hidden marquee-band pb-12 pt-4 md:pb-16"
       >
         <div className={`flex w-max ${prefersReducedMotion ? "" : "animate-marquee"}`}>
           {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((item, i) => (
             <span
               key={i}
-              className="flex items-center gap-3 pr-10 font-mono text-xs font-medium tracking-[0.2em] text-[var(--text-primary)]"
+              className="flex items-center gap-3 pr-10 font-mono text-xs font-bold tracking-[0.2em] text-[var(--text-primary)]"
             >
               {item}
-              <span className="text-[#ffd23f]">★</span>
+              <span className="text-[var(--accent)]">★</span>
             </span>
           ))}
         </div>

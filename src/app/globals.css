@@ -352,16 +352,16 @@
    colors cross-fade into each other — never a hard rule, never a patch of
    raw video standing in for either side. */
 .section-overlap {
-  margin-top: -1.5rem;
-  -webkit-mask-image: linear-gradient(to bottom, transparent, black 1.5rem);
-  mask-image: linear-gradient(to bottom, transparent, black 1.5rem);
+  margin-top: -2.5rem;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 2.5rem);
+  mask-image: linear-gradient(to bottom, transparent, black 2.5rem);
 }
 
 @media (min-width: 768px) {
   .section-overlap {
-    margin-top: -2rem;
-    -webkit-mask-image: linear-gradient(to bottom, transparent, black 2rem);
-    mask-image: linear-gradient(to bottom, transparent, black 2rem);
+    margin-top: -4rem;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 4rem);
+    mask-image: linear-gradient(to bottom, transparent, black 4rem);
   }
 }
 
@@ -495,6 +495,13 @@
   --grad-brand: linear-gradient(110deg, #a78bfa 0%, #5cb4ff 55%, #5eead4 100%);
 }
 
+/* Soft band: video-clear at the top, fading into the next section's glass so
+   the hero hands off to the content below without a hard color edge. */
 .marquee-band {
-  background: var(--grad-cool);
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--background) 22%, transparent),
+    color-mix(in srgb, var(--solid-tint) 78%, transparent)
+  );
+  backdrop-filter: blur(6px);
 }

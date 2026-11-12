@@ -2,6 +2,8 @@ import { Reveal } from "@/components/ui/reveal";
 import { CASE_STUDY } from "@/lib/data";
 import { brandColor, sectionTint } from "@/lib/brand-colors";
 import { SectionMotion } from "@/components/ui/section-motion";
+import { PhotoCollage } from "@/components/ui/photo-frame";
+import { PHOTOS } from "@/lib/photos";
 
 export function CaseStudy() {
   return (
@@ -40,6 +42,12 @@ export function CaseStudy() {
                 operación efectiva y un impacto directo en las comunidades.
               </p>
             </Reveal>
+            <PhotoCollage
+              className="mt-12"
+              main={PHOTOS.farmer}
+              second={PHOTOS.harvest}
+              colors={["var(--brand-red)", "var(--brand-green)"]}
+            />
           </div>
 
           <ol className="relative border-l border-[var(--border)] pl-8">

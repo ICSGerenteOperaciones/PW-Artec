@@ -3,6 +3,8 @@ import { Reveal } from "@/components/ui/reveal";
 import { RadarScan } from "@/components/ui/radar-scan";
 import { sectionTint } from "@/lib/brand-colors";
 import { SectionMotion } from "@/components/ui/section-motion";
+import { PhotoCollage } from "@/components/ui/photo-frame";
+import { PHOTOS } from "@/lib/photos";
 
 export function About() {
   return (
@@ -17,6 +19,13 @@ export function About() {
             eyebrow="Sobre ARTEC"
             title="Impulsamos el alcance y los resultados de su organización con un aliado integral."
             description="ARTEC opera como un aliado integral que combina planeación estratégica, ejecución digital, infraestructura tecnológica, operación humana e implementación territorial en un ecosistema único y coordinado, construido para escalar."
+          />
+          <PhotoCollage
+            className="mt-12 !mx-0"
+            main={PHOTOS.team}
+            second={PHOTOS.outdoor}
+            colors={["var(--brand-green)", "var(--brand-orange)"]}
+            flip
           />
         </div>
 

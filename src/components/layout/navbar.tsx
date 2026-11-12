@@ -34,7 +34,7 @@ export function Navbar() {
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-[var(--nav-glass)] backdrop-blur-md border-b border-[var(--border)]"
+            ? "nav-solid"
             : "bg-gradient-to-b from-[color-mix(in_srgb,var(--background)_var(--nav-top-pct),transparent)] to-transparent"
         }`}
       >

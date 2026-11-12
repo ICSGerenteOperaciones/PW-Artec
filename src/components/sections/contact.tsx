@@ -8,6 +8,8 @@ import { SERVICE_OPTIONS } from "@/lib/data";
 import { SITE } from "@/lib/constants";
 import { sectionTint } from "@/lib/brand-colors";
 import { SectionMotion } from "@/components/ui/section-motion";
+import { PhotoFrame } from "@/components/ui/photo-frame";
+import { PHOTOS } from "@/lib/photos";
 
 type FormState = {
   name: string;
@@ -80,8 +82,18 @@ export function Contact() {
             description="Cuéntanos qué quieres lograr y nuestro equipo te ayudará a identificar la combinación correcta de estrategia, tecnología y ejecución."
           />
 
+          <Reveal delay={0.1}>
+            <PhotoFrame
+              photo={PHOTOS.agent}
+              color="var(--brand-blue)"
+              tilt={-1.5}
+              aspect="aspect-[16/10]"
+              className="mt-10 w-[92%] max-w-md"
+            />
+          </Reveal>
+
           <Reveal delay={0.15}>
-            <dl className="mt-10 space-y-5 border-t border-[var(--border)] pt-8">
+            <dl className="mt-12 space-y-5 border-t border-[var(--border)] pt-8">
               <div className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" aria-hidden="true" />
                 <div>

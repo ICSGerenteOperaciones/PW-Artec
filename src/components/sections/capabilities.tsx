@@ -3,6 +3,8 @@ import { Reveal } from "@/components/ui/reveal";
 import { CAPABILITIES } from "@/lib/data";
 import { brandColor, sectionTint } from "@/lib/brand-colors";
 import { SectionMotion } from "@/components/ui/section-motion";
+import { PhotoCollage } from "@/components/ui/photo-frame";
+import { PHOTOS } from "@/lib/photos";
 
 export function Capabilities() {
   return (
@@ -12,10 +14,18 @@ export function Capabilities() {
     >
       <SectionMotion tint="var(--brand-indigo)" seed={2} />
       <div className="container-artec relative">
-        <SectionHeading
-          eyebrow="Capacidades"
-          title="Una matriz completa de capacidad estratégica, técnica y operativa."
-        />
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_1fr] lg:gap-16">
+          <SectionHeading
+            eyebrow="Capacidades"
+            title="Una matriz completa de capacidad estratégica, técnica y operativa."
+          />
+          <PhotoCollage
+            className="!mx-0 lg:ml-auto"
+            main={PHOTOS.datacenter}
+            second={PHOTOS.code}
+            colors={["var(--brand-indigo)", "var(--brand-blue)"]}
+          />
+        </div>
 
         <div className="mt-16 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--border)] sm:grid-cols-2 lg:grid-cols-3">
           {CAPABILITIES.map((group, i) => {

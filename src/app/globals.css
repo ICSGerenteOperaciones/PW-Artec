@@ -505,3 +505,19 @@
   );
   backdrop-filter: blur(6px);
 }
+
+/* Scrolled navbar: branded violet→blue glass with light text instead of a white bar.
+   Re-points the theme tokens inside the header so logo, links and button adapt. */
+.nav-solid {
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+  --accent: #ffffff;
+  --accent-hover: #ece6ff;
+  --accent-foreground: #3a1fa8;
+  --border: rgba(255, 255, 255, 0.32);
+  --background: #3a1fa8;
+  background: linear-gradient(100deg, rgba(88, 40, 214, 0.93), rgba(37, 99, 235, 0.93));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px -14px rgba(21, 15, 51, 0.55);
+}

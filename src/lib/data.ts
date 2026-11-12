@@ -90,7 +90,7 @@ export const SOLUTIONS: Solution[] = [
       {
         title: "Contact center multicanal",
         description:
-          "Infraestructura para la atención, soporte y la fidelización de más de 1.500 usuarios en simultáneo, garantizando la satisfacción del cliente final.",
+          "Infraestructura para la atención, el soporte y la fidelización de más de 1.500 usuarios en simultáneo, garantizando la satisfacción del cliente final.",
       },
       {
         title: "Telemercadeo y confirmación",

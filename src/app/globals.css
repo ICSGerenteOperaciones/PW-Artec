@@ -513,10 +513,10 @@
   --text-secondary: #ffffff;
   --accent: #ffffff;
   --accent-hover: #ece6ff;
-  --accent-foreground: #3d1aa8;
-  --border: rgba(255, 255, 255, 0.3);
-  --background: #3d1aa8;
-  background: rgba(88, 42, 210, 0.94);
+  --accent-foreground: #5b2bd9;
+  --border: rgba(255, 255, 255, 0.35);
+  --background: #6a3be0;
+  background: rgba(124, 77, 235, 0.92);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 10px 30px -14px rgba(21, 15, 51, 0.55);

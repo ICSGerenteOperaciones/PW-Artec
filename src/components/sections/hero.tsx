@@ -71,7 +71,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.2 }}
-          className="flex flex-1 items-center justify-center py-10"
+          className="flex flex-1 items-center justify-center py-10 lg:absolute lg:inset-x-0 lg:top-1/2 lg:-translate-y-1/2 lg:flex-none lg:py-0"
         >
           <div className="flex items-center gap-4 sm:gap-6">
             <Image
@@ -80,9 +80,9 @@ export function Hero() {
               width={433}
               height={410}
               priority
-              className="h-20 w-auto drop-shadow-[0_6px_24px_rgba(255,255,255,0.55)] sm:h-28 lg:h-36"
+              className="h-20 w-auto drop-shadow-[0_0_22px_rgba(255,255,255,0.95)] sm:h-28 lg:h-36"
             />
-            <span className="font-display text-5xl font-extrabold leading-none tracking-tight text-white drop-shadow-[0_4px_20px_rgba(21,15,51,0.45)] sm:text-7xl lg:text-8xl">
+            <span className="font-display text-5xl font-extrabold leading-none tracking-tight text-[#150f33] drop-shadow-[0_0_20px_rgba(255,255,255,0.95)] sm:text-7xl lg:text-8xl">
               ARTEC
             </span>
           </div>

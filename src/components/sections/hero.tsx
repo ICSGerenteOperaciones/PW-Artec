@@ -71,7 +71,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.2 }}
-          className="flex flex-1 items-center justify-center py-10 lg:absolute lg:inset-x-0 lg:top-1/2 lg:-translate-y-1/2 lg:flex-none lg:py-0"
+          className="flex flex-1 items-center justify-center py-10 lg:absolute lg:inset-x-0 lg:top-[50vh] lg:-translate-y-1/2 lg:flex-none lg:py-0"
         >
           <div className="flex items-center gap-4 sm:gap-6">
             <Image

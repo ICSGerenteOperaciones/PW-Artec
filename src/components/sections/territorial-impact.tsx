@@ -80,21 +80,41 @@ export function TerritorialImpact() {
         </div>
 
         <Reveal className="mt-24 md:mt-32">
-          <div className="relative overflow-hidden rounded-[2rem] bg-grad-brand p-8 text-center text-white shadow-[0_30px_60px_-30px_rgba(91,43,217,0.7)] md:p-14">
-            <p className="font-display text-3xl font-extrabold leading-tight tracking-tight text-balance md:text-5xl">
+          <div
+            className="relative overflow-hidden rounded-[2rem] p-8 text-center text-white shadow-[0_30px_60px_-30px_rgba(91,43,217,0.6)] ring-1 ring-white/30 md:p-14"
+            style={{
+              background:
+                "linear-gradient(125deg, #4a22b5 0%, #5b2bd9 45%, #7a5ae6 100%)",
+            }}
+          >
+            {/* Echoes the hero video: soft concentric rings and a warm glow. */}
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -right-24 top-1/2 h-[26rem] w-[26rem] -translate-y-1/2 rounded-full border border-white/20"
+            />
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -right-8 top-1/2 h-[16rem] w-[16rem] -translate-y-1/2 rounded-full border border-white/25"
+            />
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -left-20 -top-24 h-72 w-72 rounded-full opacity-60 blur-3xl"
+              style={{ background: "radial-gradient(circle, rgba(247,163,92,0.7), transparent 70%)" }}
+            />
+            <p className="relative font-display text-3xl font-extrabold leading-tight tracking-tight text-balance md:text-5xl">
               {TERRITORY_STORY.closing}
             </p>
-            <ul className="mt-6 flex flex-wrap justify-center gap-2.5">
+            <ul className="relative mt-6 flex flex-wrap justify-center gap-2.5">
               {TERRITORY_STORY.reach.map((item) => (
                 <li
                   key={item}
-                  className="rounded-full bg-white/20 px-4 py-1.5 text-sm font-semibold backdrop-blur-sm"
+                  className="rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold ring-1 ring-white/25 backdrop-blur-sm"
                 >
                   {item}
                 </li>
               ))}
             </ul>
-            <div className="mt-8">
+            <div className="relative mt-8">
               <MagneticCTA href="#contact" variant="secondary" className="!border-white !bg-white !text-[#3d1aa8]">
                 Llevemos tu proyecto al territorio
               </MagneticCTA>

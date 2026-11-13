@@ -13,25 +13,25 @@ export function About() {
       className="section-tinted relative overflow-hidden section-overlap bg-[var(--surface-glass)] py-24 backdrop-blur-xl md:py-32"
     >
       <SectionMotion tint="var(--brand-green)" seed={5} />
-      <div className="container-artec relative grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
-        <div>
+      <div className="container-artec relative grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
+        <PhotoCollage
+          className="order-2 !mx-0 lg:order-1"
+          main={PHOTOS.team}
+          second={PHOTOS.outdoor}
+          colors={["var(--brand-green)", "var(--brand-orange)"]}
+          flip
+        />
+
+        <div className="order-1 lg:order-2">
           <SectionHeading
             eyebrow="Sobre ARTEC"
             title="Impulsamos el alcance y los resultados de tu organización con un aliado integral."
             description="ARTEC opera como un aliado integral que combina planeación estratégica, ejecución digital, infraestructura tecnológica, operación humana e implementación territorial en un ecosistema único y coordinado, construido para escalar."
           />
-          <PhotoCollage
-            className="mt-12 !mx-0"
-            main={PHOTOS.team}
-            second={PHOTOS.outdoor}
-            colors={["var(--brand-green)", "var(--brand-orange)"]}
-            flip
-          />
+          <Reveal delay={0.1}>
+            <RadarScan className="mt-10 max-w-[10rem]" />
+          </Reveal>
         </div>
-
-        <Reveal delay={0.1}>
-          <RadarScan className="mx-auto" />
-        </Reveal>
       </div>
     </section>
   );
